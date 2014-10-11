@@ -6,27 +6,8 @@ export DH_VERBOSE=1
 %:
 	dh $@ --with quilt
 
-#override_dh_auto_configure:
-#	dh_autoreconf
-#	./configure --enable-shared=yes \
-#				--prefix=/usr \
-#				--with-sql=yes \
-#				--with-mysql \
-#				--with-postgresql \
-#				--with-libvirt \
-#				--with-lmdb \
-#				--with-libxml2 \
-#				--with-workdir=/var/lib/cfengine3 \
-#				--with-logdir=/var/log/cfengine3 \
-#				--with-piddir=/run/cfengine3 \
-#				--libdir=/usr/lib/cfengine3 \
-#				--docdir=\$${prefix}/share/doc/cfengine3 \
-#				--datadir=\$${prefix}/share/cfengine3 \
-#				--mandir=\$${prefix}/share/man \
-#				--infodir=\$${prefix}/share/info \
-#				--htmldir=\$${prefix}/share/doc/cfengine3/html \
-#				CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,relro" \
-#				CPPFLAGS=-D_FORTIFY_SOURCE=2
+override_dh_auto_configure:
+	./autogen.sh --prefix=/usr/share/doc/cfengine3/masterfiles
 
 #override_dh_auto_test:
 #	/bin/true

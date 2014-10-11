@@ -1,0 +1,9 @@
+The package contains the default masterfiles with simple configuration as
+provided by CFEngine. It is only slightly patched to work with a directory
+structure other than /var/cfengine.
+
+You should install this package only on the policy server and only if you are
+creating a new policy set. The package files land in
+/usr/share/doc/cfengine3/masterfiles but if your /var/lib/cfengine3/masterfiles
+is empty, those default configuration files will be copied there as well for
+your convenience.

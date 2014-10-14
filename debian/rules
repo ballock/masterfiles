@@ -9,9 +9,9 @@ export DH_VERBOSE=1
 override_dh_auto_configure:
 	./autogen.sh --prefix=/usr/share/doc/cfengine3/masterfiles
 
-#override_dh_auto_test:
-#	/bin/true
-#
+override_dh_auto_test:
+	/bin/true
+
 #override_dh_clean:
 #	dh_autoreconf_clean
 #	dh_clean --exclude=#008.cf#

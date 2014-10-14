@@ -17,7 +17,7 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-SOURCE=/usr/share/doc/cfengine3/masterfiles
+SOURCE=/usr/share/cfengine3/CoreBase
 WORKDIR=/var/lib/cfengine3
 MASTERFILES=$WORKDIR/masterfiles
 

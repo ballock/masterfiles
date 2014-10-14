@@ -2,12 +2,13 @@
 # vim:noet:ts=4:sw=4:
 
 export DH_VERBOSE=1
+export DEST=/usr/share/cfengine3/CoreBase
 
 %:
 	dh $@ --with quilt
 
 override_dh_auto_configure:
-	./autogen.sh --prefix=/usr/share/cfengine3/CoreBase
+	./autogen.sh --prefix=${DEST} --datadir=${DEST}
 
 override_dh_auto_test:
 	/bin/true

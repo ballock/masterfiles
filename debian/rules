@@ -40,7 +40,7 @@ override_dh_install:
 	dh_installdirs
 
 	# Add here commands to install the package into debian/cfengine3.
-	$(MAKE) DESTDIR=$(CURDIR)/debian/cfengine3-masterfiles/usr/share/doc/cfengine3/masterfiles install
+	$(MAKE) DESTDIR=$(CURDIR)/debian/cfengine3-masterfiles install
 #	/bin/rmdir $(CURDIR)/debian/cfengine3/usr/sbin
 #	/bin/mv $(CURDIR)/debian/cfengine3/usr/bin $(CURDIR)/debian/cfengine3/usr/sbin
 #

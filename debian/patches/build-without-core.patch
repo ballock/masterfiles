@@ -1,0 +1,12 @@
+diff -wruN -x '*~' -x '*.o' -x '*.a' -x '*.so' -x '*.so.[0-9]' -x autom4te.cache -x .deps -x .libs ../orig-masterfiles-3.6.1/configure.ac ./configure.ac
+--- ../orig-masterfiles-3.6.1/configure.ac	2014-07-24 11:21:34.000000000 +0200
++++ ./configure.ac	2014-07-30 16:40:15.927986885 +0200
+@@ -46,8 +46,6 @@
+             )],
+             core_dir=$(pwd)/../core
+ )
+-AS_IF([test ! -d "$core_dir/libpromises"],
+-      [AC_MSG_ERROR([$with_core is not a valid core directory (--with-core=$core_dir)], [2])])
+ AS_CASE([$core_dir], [/*], [], [core_dir=$(pwd)/$core_dir])
+ AC_SUBST([core_dir])
+ 

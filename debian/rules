@@ -33,14 +33,14 @@ override_dh_auto_configure:
 #override_dh_installdocs:
 #	dh_installdocs
 #
-#override_dh_install:
-#	dh_testdir
-#	dh_testroot
-#	dh_prep
-#	dh_installdirs
-#
-#	# Add here commands to install the package into debian/cfengine3.
-#	$(MAKE) DESTDIR=$(CURDIR)/debian/cfengine3 install
+override_dh_install:
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	# Add here commands to install the package into debian/cfengine3.
+	$(MAKE) DESTDIR=$(CURDIR)/debian/cfengine3-masterfiles/usr/share/doc/cfengine3/masterfiles install
 #	/bin/rmdir $(CURDIR)/debian/cfengine3/usr/sbin
 #	/bin/mv $(CURDIR)/debian/cfengine3/usr/bin $(CURDIR)/debian/cfengine3/usr/sbin
 #

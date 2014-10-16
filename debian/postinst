@@ -22,7 +22,7 @@ WORKDIR=/var/lib/cfengine3
 MASTERFILES=$WORKDIR/masterfiles
 
 perhaps_copy_masterfiles() {
-    if [ -d $MASTERFILES ]; then
+    if [ ! -d $MASTERFILES ]; then
       mkdir -p $MASTERFILES
       copy_masterfiles
     elif [ `ls -1 $MASTERFILES | wc -l` = 0 ]; then

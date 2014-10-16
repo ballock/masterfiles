@@ -1,1 +1,2 @@
 build-without-core.patch
+datadir.patch

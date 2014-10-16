@@ -1,0 +1,13 @@
+--- cfengine3-masterfiles-3.6.2.orig/configure.ac
++++ cfengine3-masterfiles-3.6.2/configure.ac
+@@ -69,7 +69,9 @@ dnl ####################################
+ AS_IF([test x"$prefix" = xNONE],
+     prefix=/var/cfengine
+ )
+-datadir=${prefix}/masterfiles
++AS_IF([test x"$datadir" = xNONE],
++    datadir=${prefix}/masterfiles
++)
+ 
+ dnl ######################################################################
+ dnl Generate install target list.

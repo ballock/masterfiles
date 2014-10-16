@@ -25,7 +25,7 @@ perhaps_copy_masterfiles() {
     if [ -d $MASTERFILES ]; then
       mkdir -p $MASTERFILES
       copy_masterfiles
-    elif [ `ls -1 $MASTERFILES | wc -l` = 0 ];
+    elif [ `ls -1 $MASTERFILES | wc -l` = 0 ]; then
       copy_masterfiles
     fi
 }
